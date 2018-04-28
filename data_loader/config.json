@@ -1,0 +1,5 @@
+{
+    "data_dir": "../dataset/hymenoptera_data",
+    "batch_size": 4,
+    "num_workers": 4
+}
