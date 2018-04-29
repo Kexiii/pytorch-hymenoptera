@@ -6,7 +6,7 @@ Pytorch CV project template for deep learning, take hymenoptera dataset as an ex
 * Torch vision 0.1.9+
 * Python 2.7
 
-# Example
+# Dataset
 This template uses the Pytorch official tutorial's hymenoptera dataset as an example, to run the example:
 * Create a directory to store the dataset
 
@@ -30,7 +30,22 @@ mkdir dataset
  unzip hymenoptera_data.zip
 ```
 * Train and test
+
+# Example
+* Train the model, if you use the hymenoptera example and default model settings(including seed in config.json), you will get 94.118% val accuracy
 ```
-python hymenoptera_train
-python hymenoptera_test
+python train.py
+```
+* Test the model, in this example, we still use the validation set to test our model(don't do this in practice), so you will get the test accuracy near 94.118% too. Note that you should choose the checkpoint file manually
+```
+python test.py --checkpoint logging/checkpoint.pth
+```
+* Plot the curve
+```
+python plot.py
+```
+This will produce two image files: accuracy.jpg, loss.jpg
+* Resume from previous work
+```
+python train.py --resume logging/checkpoint_to_resume.pth
 ```
