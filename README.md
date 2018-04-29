@@ -45,6 +45,10 @@ python test.py --checkpoint logging/checkpoint.pth
 python plot.py
 ```
 This will produce two image files: accuracy.jpg, loss.jpg
+
+![accuracy](https://github.com/Kexiii/pytorch-hymenoptera/blob/master/accuracy.jpg)
+![loss](https://github.com/Kexiii/pytorch-hymenoptera/blob/master/loss.jpg)
+
 * Resume from previous work
 ```
 python train.py --resume logging/checkpoint_to_resume.pth
