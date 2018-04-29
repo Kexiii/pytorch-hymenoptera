@@ -15,7 +15,7 @@ import json
 import copy
 
 # Define your data loader config path here
-data_loader_config_path = "config.json"
+data_loader_config_path = os.path.join(os.path.dirname(__file__),"config.json")
 
 # Define your own data transforms here
 data_transforms = {
@@ -46,7 +46,10 @@ def get_data_loaders():
         implement the test phase in the same way
     """
     config = json.load(open(data_loader_config_path))
-    data_dir = config['data_dir']
+    
+    data_dir = os.path.join(os.path.dirname(__file__),config['data_dir'])
+    # Uncomment this if you use the absolute path
+    # data_dir = config['data_dir']
     batch_size = config['batch_size']
     num_workers = config['num_workers']
     image_datasets = {x:datasets.ImageFolder(os.path.join(data_dir,x),
@@ -61,6 +64,8 @@ def imshow(input, title=None):
     Params:
         input:
             pytorch image batch tensor with shape (batch_size,color_channel,W,H) 
+        title:
+            title for the output image
     Return:
         None
     """
