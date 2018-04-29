@@ -1,5 +1,5 @@
 # pytorch-hymenoptera
-Pytorch CV project template for deep learning, take hymenoptera dataset as an example.
+Pytorch CV project template for deep learning researchers, take hymenoptera dataset as an example.
 
 # Requirement
 * Pytorch 0.3+
@@ -7,7 +7,7 @@ Pytorch CV project template for deep learning, take hymenoptera dataset as an ex
 * Python 2.7
 
 # Dataset
-This template uses the Pytorch official tutorial's hymenoptera dataset as an example, to run the example:
+This template takes the Pytorch official tutorial's hymenoptera dataset as an example, to run the example:
 * Create a directory to store the dataset
 
 ```
@@ -32,7 +32,7 @@ mkdir dataset
 * Train and test
 
 # Example
-* Train the model, if you use the hymenoptera example and default model settings(including seed in config.json), you will get 94.118% val accuracy
+* Train the model, if you use the default model settings(including seed in config.json), you will get 94.118% val accuracy
 ```
 python train.py
 ```
